@@ -7,9 +7,6 @@ function Get-MsolUserLicences
         .NOTES  
             File Name   : Get-MsolUserLicences.ps1
             Author      : Thomas ILLIET, contact@thomas-illiet.fr
-            Date        : 2017-11-03
-            Last Update : 2018-01-08
-            Version     : 1.0.6
 
         .PARAMETER UserprincipalName
             Speicifies the user ID of the user to retrieve.
