@@ -33,7 +33,7 @@ Try {
 # Get Current Version
 Write-Output "- Get Current Version"
 Try {
-    [Version]$Version = (Find-Module -Name 'Garbage-Collector' -ErrorAction SilentlyContinue).Version
+    [Version]$Version = (Find-Module -Name $ModuleName -ErrorAction SilentlyContinue).Version
     if($Version -ne $null) {
         $Version = switch($Increment) {
             "Major" {
