@@ -77,6 +77,10 @@ function Get-MsolUserLicences
             {
                 # Licence Name
                 $LicenseName = @{
+                    "MCOMEETADV"                           = "Skype for Business PSTN Conferencing"
+                    "MCOPSTN1"                             = "Skype for Business PSTN Domestic Calling"
+                    "MCOPSTN2"                             = "Skype for Business PSTN Domestic and International Calling"
+                    "MCOEV"                                = "Skype for Business Cloud PBX"
                     "TEAMS1"                               = "Microsoft Teams"
                     "AAD_PREMIUM"                          = "Azure Active Directory Premium P1"
                     "AAD_PREMIUM_P2"                       = "Azure Active Directory Premium P2"
