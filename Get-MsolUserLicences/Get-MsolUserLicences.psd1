@@ -39,7 +39,7 @@
         PSData = @{
     
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags = @('Office365')
+            Tags = @('Office','Office365', 'Licence', 'Msol')
     
             # A URL to the license for this module.
             LicenseUri = 'https://raw.githubusercontent.com/thomas-illiet/Get-MsolUserLicences/master/LICENSE'
