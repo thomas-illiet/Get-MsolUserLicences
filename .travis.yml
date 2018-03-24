@@ -13,7 +13,8 @@ install:
   - sudo apt-get install -y powershell
 
 script:
-  - sudo pwsh -File Build.ps1 -PSGalleryApiKey $PSGalleryApiKey -ModuleName $ModuleName
+  - wget https://raw.githubusercontent.com/thomas-illiet/TravisBuild/master/Powershell/PowershellGallery.ps1
+  - sudo pwsh -File PowershellGallery.ps1 -PSGalleryApiKey $PSGalleryApiKey -ModuleName $ModuleName
 
 notifications:
   email:

@@ -1,10 +1,10 @@
 function Get-MsolUserLicences
 {
-    <#  
-        .DESCRIPTION  
+    <#
+        .DESCRIPTION
             This script provides a report that shows license allocation in Office 365.
-            
-        .NOTES  
+
+        .NOTES
             File Name   : Get-MsolUserLicences.ps1
             Author      : Thomas ILLIET, contact@thomas-illiet.fr
 
@@ -70,7 +70,7 @@ function Get-MsolUserLicences
             {
                 throw "Unable to load LicenceFile ! "
             }
-            
+
             # Search Licence by sku name
             if($LicenseName.($sku))
             {
@@ -81,7 +81,6 @@ function Get-MsolUserLicences
                 Write-Debug "Sku name ($sku) is not defined"
                 return $sku
             }
-
         }
 
         #----------------------------------------------
@@ -95,7 +94,7 @@ function Get-MsolUserLicences
         }
 
         # Loop through all licence types found in the tenant
-        foreach ($license in $licensetype.AccountSkuId) 
+        foreach ($license in $licensetype.AccountSkuId)
         {
             if($ConvertName -eq $true)
             {
@@ -109,7 +108,6 @@ function Get-MsolUserLicences
         }
     }
 
-
     Process  {
         #----------------------------------------------
         # Get All users
@@ -120,7 +118,7 @@ function Get-MsolUserLicences
         }
         else
         {
-            $Users = Get-MsolUser -All | where {$_.isLicensed -eq "True"} | select DisplayName, UserPrincipalName, isLicensed, Licenses
+            $Users = Get-MsolUser -All | Where-Object {$_.isLicensed -eq "True"} | Select-Object DisplayName, UserPrincipalName, isLicensed, Licenses
         }
 
         #----------------------------------------------

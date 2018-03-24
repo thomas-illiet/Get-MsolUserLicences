@@ -19,7 +19,7 @@ Install-Script -Name Get-MsolUserLicences
 
 ## EXEMPLE
 
-``` 
+```
 Get-MsolUserLicences -UserPrincipalName "unicorn@microsoft.com"
 
 DisplayName                             : CANONNE Ronan
